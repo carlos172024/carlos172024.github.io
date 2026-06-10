@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaticano - Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* RESET */
+        * {margin:0; padding:0; box-sizing:border-box;}
+        body {font-family: 'Montserrat', sans-serif; line-height:1.6; background:#f8f8f8; color:#333;}
+        a {text-decoration:none; color:inherit;}
+        h2 {font-family:'Merriweather', serif; color:#002147; margin-bottom:20px; text-align:center;}
+        h2::after {content:''; display:block; width:60px; height:3px; background:#ffd700; margin:10px auto 0;}
+
+        /* HEADER */
+        header {
+            position:relative;
+            height:60vh;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/5/55/St_Peter%27s_Basilica_in_Vatican_City.jpg') center/cover no-repeat;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            color:white;
+        }
+        header::after {
+            content:'';
+            position:absolute;
+            top:0; left:0;
+            width:100%; height:100%;
+            background: rgba(0,0,0,0.5);
+        }
+        header h1 {z-index:1; font-size:3em; margin-bottom:10px;}
+        header p {z-index:1; font-size:1.2em;}
+
+        /* NAVBAR */
+        nav {
+            background:#002147;
+            position:sticky;
+            top:0;
+            z-index:10;
+        }
+        nav ul {display:flex; justify-content:center; list-style:none; padding:10px 0;}
+        nav li {margin:0 20px;}
+        nav a {color:white; font-weight:bold; transition:0.3s;}
+        nav a:hover {color:#ffd700;}
+
+        /* SECTIONS */
+        section {padding:60px 20px; max-width:1100px; margin:auto;}
+        .historico {background:#fff8dc; border-radius:10px; padding:30px;}
+        .historico p {margin-bottom:20px; font-size:1.1em; text-align:justify;}
+
+        .visita ul {
+            list-style:none;
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+            gap:20px;
+        }
+        .visita li {
+            background:#fff;
+            border-radius:10px;
+            padding:20px;
+            text-align:center;
+            box-shadow:0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .visita li:hover {transform:translateY(-5px);}
+        .visita li h3 {margin-bottom:15px; color:#002147;}
+
+        .galeria {
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+            gap:30px;
+            justify-items:center;
+        }
+        .card-papa {
+            background:#fff;
+            border-radius:10px;
+            overflow:hidden;
+            box-shadow:0 4px 10px rgba(0,0,0,0.1);
+            text-align:center;
+            transition:transform 0.3s;
+        }
+        .card-papa:hover {transform:scale(1.05);}
+        .card-papa img {width:100%; height:250px; object-fit:cover;}
+        .card-papa h4 {padding:15px; background:#002147; color:white;}
+
+        footer {background:#002147; color:white; text-align:center; padding:30px 20px; margin-top:40px;}
+        footer a {color:#ffd700;}
+
+        @media(max-width:768px){
+            header h1{font-size:2.2em;}
+            header p{font-size:1em;}
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Vaticano</h1>
+        <p>Descubra a história, cultura e os Papas do Vaticano</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#historico">Histórico</a></li>
+            <li><a href="#visita">Visita</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+        </ul>
+    </nav>
+
+    <section id="historico" class="historico">
+        <h2>Histórico</h2>
+        <p>O Vaticano é o centro espiritual da Igreja Católica e a residência oficial do Papa. Localizado em Roma, é a menor cidade-estado do mundo e guarda um patrimônio artístico, cultural e religioso incomparável.</p>
+        <p>Entre seus tesouros, destacam-se a Basílica de São Pedro, a Capela Sistina e os Museus Vaticanos. Ao longo dos séculos, o Vaticano tem sido palco de eventos históricos, decisões religiosas importantes e encontros com líderes mundiais.</p>
+    </section>
+
+    <section id="visita" class="visita">
+        <h2>Informações de Visita</h2>
+        <ul>
+            <li>
+                <h3>Basílica de São Pedro</h3>
+                <p>Explore a grandiosidade da maior igreja do mundo, com obras-primas de Michelangelo e Bernini.</p>
+            </li>
+            <li>
+                <h3>Capela Sistina</h3>
+                <p>Admire os frescos icônicos de Michelangelo, incluindo o teto e o Juízo Final.</p>
+            </li>
+            <li>
+                <h3>Museus Vaticanos</h3>
+                <p>Descubra coleções de arte que abrangem milênios, desde antiguidades até obras renascentistas.</p>
+            </li>
+            <li>
+                <h3>Jardins do Vaticano</h3>
+                <p>Passeie por jardins históricos e áreas verdes exclusivas da cidade-estado.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="galeria">
+        <h2>Papas Recentes</h2>
+        <div class="galeria">
+            <div class="card-papa">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Pope_John_Paul_II.jpg" alt="Papa João Paulo II">
+                <h4>João Paulo II</h4>
+            </div>
+            <div class="card-papa">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Portrait_of_Pope_Benedict_XVI_%282011%29.jpg/668px-Portrait_of_Pope_Benedict_XVI_%282011%29.jpg" alt="Papa Bento XVI">
+                <h4>Bento XVI</h4>
+            </div>
+            <div class="card-papa">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Portrait_of_Pope_Francis_%282021%29.jpg/893px-Portrait_of_Pope_Francis_%282021%29.jpg" alt="Papa Francisco">
+                <h4>Francisco</h4>
+            </div>
+            <div class="card-papa">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Portrait_of_Pope_Leo_XIV_1_%2820150512%29.png/1246px-Portrait_of_Pope_Leo_XIV_1_%2820150512%29.png" alt="Papa Leão XIV">
+                <h4>Leão XIV</h4>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Vaticano. Todos os direitos reservados. | <a href="#">Site Oficial</a></p>
+    </footer>
+
+</body>
+</html>
