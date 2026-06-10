@@ -1,2 +1,184 @@
-<h1>Pope Leo XIV</h1>
-<p> ST.PETER </p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco Umirim</title>
+    <style>
+        /* Reset simples */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2em;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1581091215363-4d85a512c43f') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+        }
+
+        .btn {
+            background-color: #ff9900;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e68a00;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        .service {
+            flex: 1 1 250px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
+        }
+
+        footer {
+            background-color: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: #ff9900;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media(max-width: 768px) {
+            .services {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Banco Umirim</h1>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Seu banco em Umirim, confiável e moderno</h2>
+        <p>Oferecemos soluções financeiras personalizadas para você, sua família e seu negócio. Simples, rápido e seguro.</p>
+        <a href="#contato" class="btn">Abra sua conta</a>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre o Banco Umirim</h2>
+        <p>Fundado em 1995, o Banco Umirim tem o compromisso de atender a comunidade local com transparência, inovação e segurança. Nossa missão é levar serviços bancários de qualidade para todos os moradores de Umirim e região.</p>
+    </section>
+
+    <section id="servicos">
+        <h2>Nossos Serviços</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Conta Corrente</h3>
+                <p>Gerencie seu dinheiro com facilidade, cartão de débito e atendimento personalizado.</p>
+            </div>
+            <div class="service">
+                <h3>Empréstimos</h3>
+                <p>Linhas de crédito acessíveis para pessoas e empresas com taxas competitivas.</p>
+            </div>
+            <div class="service">
+                <h3>Investimentos</h3>
+                <p>Opções de investimentos seguros e rentáveis para planejar seu futuro financeiro.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Fale Conosco</h2>
+        <p>Estamos prontos para ajudar você. Entre em contato conosco pelo telefone, e-mail ou visite nossa agência em Umirim.</p>
+        <p><strong>Telefone:</strong> (85) 99999-9999</p>
+        <p><strong>Email:</strong> contato@bancoumirim.com.br</p>
+        <p><strong>Endereço:</strong> Rua Principal, 123 - Umirim, CE</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Banco Umirim. Todos os direitos reservados. | <a href="#sobre">Política de Privacidade</a></p>
+    </footer>
+
+</body>
+</html>
