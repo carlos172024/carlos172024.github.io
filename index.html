@@ -1,186 +1,152 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vaticano - Centro da Igreja Católica</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaticano - Informação e Galeria</title>
+    <style>
+        /* Reset simples */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Montserrat',sans-serif;color:#333;line-height:1.6;background:#fafafa;}
-header{
-    min-height:100vh;
-    background:
-        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-        url('https://upload.wikimedia.org/wikipedia/commons/0/0f/Petersplatz_und_Basilika.jpg') no-repeat center/cover;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
-    padding:20px;
-}
-.hero{max-width:900px;}
-.hero h1{font-family:'Cinzel',serif;font-size:3.5rem;margin-bottom:20px;letter-spacing:2px;}
-.hero p{font-size:1.2rem;margin-bottom:30px;}
-.btn{display:inline-block;padding:15px 35px;background:#d4af37;color:white;text-decoration:none;border-radius:50px;font-weight:600;transition:.3s;}
-.btn:hover{background:#b89224;transform:translateY(-2px);}
-nav{position:fixed;top:0;width:100%;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);z-index:1000;}
-.nav-container{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:15px 30px;}
-.logo{color:#d4af37;font-family:'Cinzel',serif;font-size:1.5rem;font-weight:bold;}
-.nav-links{display:flex;gap:25px;}
-.nav-links a{color:white;text-decoration:none;}
-section{padding:90px 20px;}
-.container{max-width:1200px;margin:auto;}
-.section-title{text-align:center;font-family:'Cinzel',serif;font-size:2.5rem;margin-bottom:20px;color:#6b4e16;}
-.section-subtitle{text-align:center;max-width:800px;margin:0 auto 60px;color:#666;}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
-.card{background:white;border-radius:15px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08);transition:.3s;}
-.card:hover{transform:translateY(-8px);}
-.card img{width:100%;height:220px;object-fit:cover;}
-.card-content{padding:25px;}
-.card h3{margin-bottom:10px;color:#6b4e16;}
-.timeline{background:#f4f1ea;}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;text-align:center;}
-.stat{background:white;padding:35px;border-radius:15px;}
-.stat h3{font-size:2.2rem;color:#d4af37;}
-.cta{background:linear-gradient(135deg,#6b4e16,#d4af37);color:white;text-align:center;}
-.cta h2{font-family:'Cinzel',serif;margin-bottom:20px;font-size:2.4rem;}
-footer{background:#111;color:#bbb;text-align:center;padding:30px;}
-@media(max-width:768px){.hero h1{font-size:2.2rem;}.nav-links{display:none;}}
-</style>
+        header {
+            background-color: #002147;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2em;
+        }
+
+        nav {
+            background-color: #003366;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section h2 {
+            color: #002147;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .historico p, .visita p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .galeria img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 2px solid #002147;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #002147;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* Responsividade simples */
+        @media(max-width: 600px) {
+            .galeria {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<nav>
-    <div class="nav-container">
-        <div class="logo">Vaticano</div>
-        <div class="nav-links">
-            <a href="#sobre">Sobre</a>
-            <a href="#locais">Locais</a>
-            <a href="#historia">História</a>
-            <a href="#curiosidades">Curiosidades</a>
-        </div>
-    </div>
-</nav>
+    <header>
+        <h1>Bem-vindo ao Vaticano</h1>
+        <p>História, visita e galeria dos Papas</p>
+    </header>
 
-<header>
-    <div class="hero">
-        <h1>Estado da Cidade do Vaticano</h1>
-        <p>O menor país do mundo, centro espiritual da Igreja Católica, reunindo arte, história, cultura e fé em um único lugar.</p>
-        <a href="#sobre" class="btn">Explorar</a>
-    </div>
-</header>
+    <nav>
+        <a href="#historico">Histórico</a>
+        <a href="#visita">Informações de Visita</a>
+        <a href="#galeria">Galeria</a>
+    </nav>
 
-<section id="sobre">
-    <div class="container">
-        <h2 class="section-title">Sobre o Vaticano</h2>
-        <p class="section-subtitle">
-            Localizado no coração de Roma, o Vaticano é uma cidade-estado independente e sede do Papa, reconhecido oficialmente em 1929 pelo Tratado de Latrão.
-        </p>
+    <section id="historico" class="historico">
+        <h2>Histórico</h2>
+        <p>O Vaticano é a menor cidade-estado independente do mundo, localizada em Roma, Itália. É o centro espiritual da Igreja Católica e a residência oficial do Papa. A história do Vaticano remonta à construção da Basílica de São Pedro e à presença do papado na região.</p>
+        <p>Ao longo dos séculos, o Vaticano acumulou um imenso patrimônio artístico e arquitetônico, incluindo museus, capelas e jardins que atraem milhões de visitantes todos os anos.</p>
+    </section>
 
-        <div class="stats">
-            <div class="stat">
-                <h3>0,44 km²</h3>
-                <p>Área Total</p>
+    <section id="visita" class="visita">
+        <h2>Informações de Visita</h2>
+        <p>O Vaticano recebe visitantes de todo o mundo. Entre os pontos de interesse estão a Basílica de São Pedro, a Capela Sistina, os Museus Vaticanos e os Jardins do Vaticano. É recomendado agendar visitas guiadas para aproveitar ao máximo a experiência.</p>
+        <p>Horários de visita e ingressos podem ser consultados no site oficial, e é importante respeitar o código de vestimenta e as normas de conduta dentro das áreas sagradas.</p>
+    </section>
+
+    <section id="galeria" class="galeria-section">
+        <h2>Galeria dos Papas Recentes</h2>
+        <div class="galeria">
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Pope_John_Paul_II.jpg" alt="Papa João Paulo II">
+                <p style="text-align:center;">João Paulo II</p>
             </div>
-
-            <div class="stat">
-                <h3>882</h3>
-                <p>Habitantes</p>
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Pope_Benedict_XVI.jpg" alt="Papa Bento XVI">
+                <p style="text-align:center;">Bento XVI</p>
             </div>
-
-            <div class="stat">
-                <h3>1929</h3>
-                <p>Fundação Oficial</p>
-            </div>
-
-            <div class="stat">
-                <h3>6 milhões</h3>
-                <p>Visitantes/Ano</p>
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Pope_Francis_in_March_2013_cropped.jpg" alt="Papa Francisco">
+                <p style="text-align:center;">Leão XIV</p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="locais">
-    <div class="container">
-        <h2 class="section-title">Locais Icônicos</h2>
+    <footer>
+        <p>&copy; 2026 Vaticano - Todos os direitos reservados</p>
+    </footer>
 
-        <div class="cards">
-
-            <div class="card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/St_Peter%27s_Basilica_2013.jpg/800px-St_Peter%27s_Basilica_2013.jpg" alt="Basílica de São Pedro">
-                <div class="card-content">
-                    <h3>Basílica de São Pedro</h3>
-                    <p>Uma das maiores igrejas do mundo, símbolo da fé cristã e lugar de peregrinação global.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Petersplatz_und_Basilika.jpg" alt="Praça de São Pedro">
-                <div class="card-content">
-                    <h3>Praça de São Pedro</h3>
-                    <p>Famosa por suas colunatas monumentais e eventos presididos pelo Papa.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Cappella_Sistina_%28Deckenfresko%29.jpg" alt="Capela Sistina">
-                <div class="card-content">
-                    <h3>Capela Sistina</h3>
-                    <p>Local do conclave papal, abriga afrescos de Michelangelo, incluindo "A Criação de Adão".</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Vatican_Museums_-_Courtyard.jpg" alt="Museus Vaticanos">
-                <div class="card-content">
-                    <h3>Museus Vaticanos</h3>
-                    <p>Possuem uma das maiores coleções de arte do mundo, incluindo antiguidades, pinturas e esculturas.</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section id="historia" class="timeline">
-    <div class="container">
-        <h2 class="section-title">Breve História</h2>
-
-        <div class="cards">
-            <div class="card">
-                <div class="card-content">
-                    <h3>Antiguidade</h3>
-                    <p>A região já possuía relevância religiosa desde os tempos do Império Romano.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content">
-                    <h3>Idade Média</h3>
-                    <p>O poder temporal dos papas cresceu e consolidou os Estados Pontifícios.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content">
-                    <h3>1929</h3>
-                    <p>O Tratado de Latrão reconheceu oficialmente o Vaticano como Estado soberano.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="curiosidades">
-    <div class="container">
-        <h2 class="section-title">Curiosidades</h2>
-
-        <div class="cards">
-            <div class="card">
-                <div class="card-content">
-                    <h3>Menor País
+</body>
+</html>
